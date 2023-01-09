@@ -160,6 +160,16 @@ const textNodes = [
           }
         ]
       },
+      {
+        id: 9,
+        text: 'You foolishly thought this monster could be slain with a single sword.',
+        options: [
+          {
+            text: 'Restart',
+            nextText: -1
+          }
+        ]
+      },
 
 ]
 
