@@ -32,6 +32,9 @@ function showOption(option) {
 
 function selectOption(option) {
     const nextTextNodeId = option.nextText
+    if (nextTextNodeId <= 0) {
+        return startGame()
+    }
     state = Object.assign(state, option.setState)
     showTextNode(nextTextNodeId)
 }
@@ -76,8 +79,32 @@ const textNodes = [
     },
     {
         id: 3,
-        text: ''
-    }
+        text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+        options: [
+            {
+                text: 'Explore the Castle',
+                nextText: 4
+            },
+            {
+                text: 'Find a room to sleep at in the town.',
+                nextText: 5
+            },
+            {
+                text: 'Find some hay in a stable to sleep in.',
+                nextText: 6
+            }
+        ]
+    },
+    {
+        id: 4,
+        text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
+    }   
 ]
 
 startGame()
