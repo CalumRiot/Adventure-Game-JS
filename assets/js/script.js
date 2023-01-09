@@ -150,6 +150,16 @@ const textNodes = [
           }
         ]
       },
+      {
+        id: 8,
+        text: 'Your attempts to run are in vain and the monster easily catches.',
+        options: [
+          {
+            text: 'Restart',
+            nextText: -1
+          }
+        ]
+      },
 
 ]
 
