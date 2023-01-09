@@ -124,7 +124,33 @@ const textNodes = [
             nextText: 7
           }
         ]
-      },   
+      },
+      {
+        id: 7,
+        text: 'While exploring the castle you come across a horrible monster in your path.',
+        options: [
+          {
+            text: 'Try to run',
+            nextText: 8
+          },
+          {
+            text: 'Attack it with your sword',
+            requiredState: (currentState) => currentState.sword,
+            nextText: 9
+          },
+          {
+            text: 'Hide behind your shield',
+            requiredState: (currentState) => currentState.shield,
+            nextText: 10
+          },
+          {
+            text: 'Throw the blue goo at it',
+            requiredState: (currentState) => currentState.blueGoo,
+            nextText: 11
+          }
+        ]
+      },
+
 ]
 
 startGame()
