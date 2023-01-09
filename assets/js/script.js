@@ -104,7 +104,17 @@ const textNodes = [
                 nextText: -1
             }
         ]
-    }   
+    },
+    {
+        id: 5,
+        text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
+        options: [
+          {
+            text: 'Restart',
+            nextText: -1
+          }
+        ]
+      },   
 ]
 
 startGame()
