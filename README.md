@@ -8,6 +8,31 @@ You can find the live website here:
 
 # Table of Contents
 
++ [User Experience](#user-experience)
++ [Overview](#overview)
++ [User Stories](#user-stories)
++ [Structure](#structure)
++ [Surface](#surface)
++ [Aesthetic](#aesthetic)
++ [Colour Scheme](#colour-scheme)
++ [Fonts](#fonts)
++ [Features](#features)
++ [Features Implemented](#features-implemented)
++ [Future Features](#future-features)
++ [Technologies Used](#technologies-used)
++ [Languages Used](#languages-used)
++ [Programmes & Libraries Used](#programmes-and-libraries-used)
++ [Testing](#testing)
++ [Validator Testing](#validator-testing)
++ [HTML Validator](#html-validator)
++ [CSS Validator](#css-validator)
++ [JavaScript Validator](#javascript-validator)
++ [Lighthouse Testing](#lighthouse-testing)
++ [Responsiveness Testing](#responsiveness-testing)
++ [Deployment](#deployment-via-github-pages)
++ [Credits](#credits)
++ [Acknowledgements](#acknowledgements)
+
 ***
 ***
 
@@ -55,6 +80,7 @@ Text-Based Choose Your Own Adventure Games have been around sense before PC's & 
 
 ## Features Implemented
 
+* 
 
 
 
@@ -80,7 +106,7 @@ Text-Based Choose Your Own Adventure Games have been around sense before PC's & 
 
 ## Programmes and Libraries Used
 
-* Balsamig - Used to create a framework & layout for the site.
+* Balsamiq - Used to create a framework & layout for the site.
 
 * Chrome Devtools - Used for debugging, Checking website on various screen sizes and to ensure code was functioning as expected.
 
@@ -118,8 +144,6 @@ Text-Based Choose Your Own Adventure Games have been around sense before PC's & 
 ***
 ***
 
-# Deployment
-
 ## Deployment via GitHub Pages
 
 The following steps detail how the project was deployed to GitHub pages:
@@ -134,7 +158,6 @@ The following steps detail how the project was deployed to GitHub pages:
 
 # Credits
 
-## Code
 
 
 ## Acknowledgements
