@@ -114,6 +114,16 @@ const textNodes = [
             nextText: -1
           }
         ]
+      },
+      {
+        id: 6,
+        text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
+        options: [
+          {
+            text: 'Explore the castle',
+            nextText: 7
+          }
+        ]
       },   
 ]
 
