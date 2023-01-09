@@ -1,108 +1,141 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Adventure Game
 
-Welcome CalumRiot,
+## Portfolio 2 Project: _Interactive Front-End Website_
+This is a text-based choose your own adventure game designed for users of all ages to play and enjoy.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Demo
+You can find the live website here:
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# Table of Contents
 
-## Gitpod Reminders
+***
+***
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# User Experience
 
-`python3 -m http.server`
+## Overview
+Text-Based Choose Your Own Adventure Games have been around sense before PC's & Computers were mainstream. They first gained notoriety from the popular "Choose Your Own Adventure" gamebooks. The concept was first created by Edward Packard for his novel gamebooks designed for children to enjoy. In the modern age Choose Your Own Adventure games have taken on many forms. From Popular Video Games such as Telltales "The Walking Dead" & "The Wolf Among Us" to interactive shows such as Netflix's "Black Mirror: Bandersnatch". It is clear that Choose Your Own Adventure Games have been around for sometime and have taken on many different forms. It is for these reasons that I choose to create my own. The game itself is easy to play, the user is presented with a statement/question and is given multiple answers to choose from. The answers that they choose shape how there story plays out and users can find themselves discovering various endings based on their own choices. The fact that multiple endings are possible encourages the user to replay the game in an attempt to get an alternative outcome increasing overall viewtime of the site itself.
 
-A blue button should appear to click: _Make Public_,
+## User Stories
+* The user wants to play an online game with replay value that encourages them to come back.
 
-Another blue button should appear to click: _Open Browser_.
+* The user wants a simple text based game which isn't too complicated to play.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* The user wants a game that functions correctly.
 
-A blue button should appear to click: _Make Public_,
+* The user wants a pleasent and easy to read visual experience.
 
-Another blue button should appear to click: _Open Browser_.
+* The owner hopes to encourage users to come back and replay the game.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* The owner wants the game to be easily accessible to all users of any age or gaming background.
 
-To log into the Heroku toolbelt CLI:
+* The owner wants the game to be easy to understand and play.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Structure
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Surface
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Aesthetic
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Colour Scheme
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Fonts
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+***
+***
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+# Features
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Features Implemented
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+## Future Features
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+***
+***
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+# Technologies Used
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## Languages Used
 
-**So….?**
+* HTML - For Base Site Layout
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+* CSS - To Style the Site & Game
 
-**Can I opt out?**
+* JavaScript - To Implement the logic of the game & to manipulate the HTML/CSS on the site.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Programmes and Libraries Used
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+* Balsamig - Used to create a framework & layout for the site.
 
-**Anything more?**
+* Chrome Devtools - Used for debugging, Checking website on various screen sizes and to ensure code was functioning as expected.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+* Github - Used for cloud storage of the project and to deploy the site.
 
----
+* Gitpod - The IDE that was used preview and write the code for the site
 
-Happy coding!
+* Lighthouse - Used for performing tests on sites speed, accessibility & search engine optimisation.
+
+* CodeBeautify - Used to beautify code making it appear cleaner & easier to read.
+
+
+***
+***
+
+# Testing
+
+## Validator Testing
+
+
+### HTML Validator
+
+
+### CSS Validator
+
+
+### JavaScript Validator
+
+
+### Lighthouse Testing
+
+
+### Responsiveness Testing
+
+***
+***
+
+# Deployment
+
+## Deployment via GitHub Pages
+
+The following steps detail how the project was deployed to GitHub pages:
+
+1. Logged on to GitHub
+2. Opened the repository **adventure-game-js**
+3. Clicked on the **Settings** tab
+4. Under **Code & Automation** section, click **Pages**
+5. Under **Branch** select **main**
+6. Under **Source** select **Deploy from a branch**
+7. The site should now be deployed as a GitHub page. 
+
+# Credits
+
+## Code
+
+
+## Acknowledgements
+
