@@ -170,6 +170,26 @@ const textNodes = [
           }
         ]
       },
+      {
+        id: 10,
+        text: 'The monster laughed as you hid behind your shield and ate you.',
+        options: [
+          {
+            text: 'Restart',
+            nextText: -1
+          }
+        ]
+      },
+      {
+        id: 11,
+        text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        options: [
+          {
+            text: 'Congratulations. Play Again.',
+            nextText: -1
+          }
+        ]
+      }
 
 ]
 
