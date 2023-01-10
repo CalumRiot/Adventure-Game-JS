@@ -3,6 +3,17 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    text-align: center;
+    font-size: larger;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -21,6 +32,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
+    text-align: center;
 }
 
 .btn-grid {
@@ -35,7 +47,7 @@ body {
     border: 1px solid hsl(200, 100%, 30%);
     border-radius: 5px;
     padding: 5px 10px;
-    color: white;
+    color:black;
     outline: none;
 }
 
