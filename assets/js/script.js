@@ -55,6 +55,7 @@ const textNodes = [
             },
             {
                 text: 'Leave the goo',
+                setState: { oldManArrested: true },
                 nextText: 2
             }
         ]
@@ -254,6 +255,7 @@ const textNodes = [
           },
           {
             text: 'Talk to the old guy laying down by the fountain',
+            requiredState: (currentState) => currentState.oldManArrested,
             nextText: 18
           },
         ]
@@ -270,24 +272,142 @@ const textNodes = [
       },
       {
         id: 16,
-        text: "You venture into the hall of guilds you find many guilds but dominant three appear to be the sword guild, the shield guild and the archers guild. Which guild will you visit?",
+        text: "You venture into the hall of guilds you find many guilds but dominant three appear to be the sword guild, the shield guild and the archers guild. Which guild will you join?",
         options: [
           {
             text: 'The Sword Guild',
-            nextText: 17
+            nextText: 19
           },
           {
             text: 'The Shield Guild',
-            nextText: 18
+            nextText: 20
           },
           {
             text: 'The Archers Guild',
-            nextText: 19
+            nextText: 21
+          },
+          {
+            text: "Leave the Guild's Hall",
+            nextText: 14
           },
         ]
       },
-      
+      {
+        id: 19,
+        text: "You enter the sword guild it is booming with people a member of the sword guild walks up to you and asks if you have a sword as it is required for signup and entrance.",
+        options: [
+          {
+            text: 'Signup to the Sword Guild',
+            requiredState: (currentState) => currentState.sword,
+            nextText: 22
+          },
+          {
+            text: "Leave",
+            nextText: 16
+          },
+          
+        ]
+      },
+      {
+        id: 20,
+        text: "You enter the shield guild it is booming with people a member of the shield guild walks up to you and asks if you have a shield as it is required for signup and entrance.",
+        options: [
+          {
+            text: 'Signup to the Shield Guild',
+            requiredState: (currentState) => currentState.shield,
+            nextText: 23
+          },
+          {
+            text: "Leave",
+            nextText: 16
+          },
+          
+        ]
+      },
+      {
+        id: 21,
+        text: "You enter the archers guild it is booming with people a member of the archer guild walks up to you and asks if you have a bow as it is required for signup and entrance.",
+        options: [
+          {
+            text: 'Signup to the Archers Guild',
+            requiredState: (currentState) => currentState.bow,
+            nextText: 24
+          },
+          {
+            text: "Leave",
+            nextText: 16
+          },
+          
+        ]
+      },
+      {
+        id: 18,
+        text: 'You decide to strike up a conversation with the old man but he just barks about some monster "THE MONSTER HE LURKS NO MAN CAN STOP HIM ONLY A DEMON CAN KILL HIM BUT HE DIED LONG AGO NOW ONLY THE MONSTER REMAINS!"',
+        options: [
+          {
+            text: 'Tell me more about this monster!',
+            nextText: 25
+          },
+          {
+            text: "What a silly old man",
+            nextText: 15
+          },
+          
+        ]
+      },
+      {
+        id: 25,
+        text: "Before I can get an answer the town guards come and take the poor old man away",
+        options: [
+          {
+            text: 'Well that was certainly interesting...',
+            requiredState: (currentState) => currentState.oldManArrested,
+            setState: { oldManArrested: false },
+            nextText: 14
+          },
+          
+        ]
+      },
+      {
+        id: 15,
+        text: "You look around the stalls and browse the various goods but find nothing of interest.",
+        options: [
+          {
+            text: 'Go back to the fountain',
+            nextText: 14
+          }
+        ]
+      },
+      {
+        id: 17,
+        text: 'You venture over to craftmasters where you find them hard at work building weapons for the various guilds you speak with one of the craftmasters and ask if he could show you his wares. He replies "Swords & Bows 2 Silver each! Shields are Gold coin a piece a lot of metal to make a shield you know." You nod in response.',
+        options: [
+          {
+            text: 'Buy a Sword',
+            requiredState: (currentState) => currentState.silver || currentState.gold,
+            setState: { sword: true},
+            nextText: 14
+          },
+          {
+            text: 'Buy a Shield',
+            requiredState: (currentState) => currentState.gold,
+            setState: { shield: true},
+            nextText: 14
+          },
+          {
+            text: 'Buy a Bow',
+            requiredState: (currentState) => currentState.silver || currentState.gold,
+            setState: { bow: true},
+            nextText: 14
+          },
+          {
+            text: 'Buy Nothing',
+            nextText: 14
+          },
+        ]
+      },
 
+      
 ]
 
 startGame()
