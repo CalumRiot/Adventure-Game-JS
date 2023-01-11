@@ -46,15 +46,15 @@ const textNodes = [
     {
         id: 1,
         background: "url('assets/images/starting-cabin.jpg')",
-        text: 'You wake up in a strange cabin, you look around and see nobody else is around how did you get here you cannot remember. On a table in the corner of the cabin there is a strange goo substance inside of a jar what will you do with it?',
+        text: 'You wake up in a strange cabin, you look around and see nobody else is around how did you get here you cannot remember. On a table in the corner of the cabin there is a strange liquid substance inside of a jar what will you do with it?',
         options: [
             {
-                text: 'Take the jar of goo',
-                setState: { blueGoo: true},
+                text: 'Take the jar of liquid',
+                setState: { strangeLiquid: true},
                 nextText: 2
             },
             {
-                text: 'Leave the jar of goo',
+                text: 'Leave the jar of liquid',
                 setState: { oldManArrested: true },
                 nextText: 2
             }
@@ -66,21 +66,21 @@ const textNodes = [
         text: 'You venture forth in search of answers. Upon leaving the cabin you follow a small dirt trail through a spooky looking forest you continue walking as fast as your legs will carry you. Once out of the forest you come across a small tent with an oddly looking merchant inside. "Tell me weary traveller have you any goods to trade?"',
         options: [
             {
-                text: 'Trade the goo for a sword',
+                text: 'Trade the jar for a sword',
                 requiredState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, sword: true },
+                setState: { strangeLiquid: false, sword: true },
                 nextText: 3
             },
             {
-                text: 'Trade the goo for a shield',
+                text: 'Trade the jar for a shield',
                 requiredState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, shield: true },
+                setState: { strangeLiquid: false, shield: true },
                 nextText: 3
             },
             {
-                text: 'Sell the goo',
+                text: 'Sell the jar of liquid',
                 requiredState: (currentState) => currentState.blueGoo,
-                setState: { blueGoo: false, gold: true },
+                setState: { strangeLiquid: false, gold: true },
                 nextText: 3
             },
             {
@@ -172,8 +172,8 @@ const textNodes = [
             nextText: 10
           },
           {
-            text: 'Throw the blue goo at it',
-            requiredState: (currentState) => currentState.blueGoo,
+            text: 'Throw the jar of liquid at it',
+            requiredState: (currentState) => currentState.strangeLiquid,
             nextText: 11
           }
         ]
@@ -214,7 +214,7 @@ const textNodes = [
       {
         id: 11,
         background: "url('assets/images/medieval-castle.jpg')",
-        text: 'You threw your jar of goo at the monster to your astonishment the goo begins to dissolve the monster like an acid. After the dust settled you see that the monster has been destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+        text: 'You threw the jar at the monster to your astonishment the liquid begins to dissolve the monster like an acid. With no more monster and nobody around to claim the castle you take it for yourself. You soon learn the King of the land had placed a bounty on this monster and you are rewarded with endless riches for your success. You spend the remainder of your days like royality in your newly claimed castle.',
         options: [
           {
             text: 'Congratulations, You Win! Play Again?',
@@ -384,7 +384,7 @@ const textNodes = [
       {
         id: 25,
         background: "url('assets/images/medieval-town.jpg')",
-        text: "Before I can get an answer the town guards come and take the poor old man away but as he's being dragged away he rambles about some goo. Could he be talking about the goo from the cabin?",
+        text: "Before I can get an answer the town guards come and take the poor old man away but as he's being dragged away he rambles about some potion he made to destroy the monster. Could he be talking about the jar of liquid from the cabin?",
         options: [
           {
             text: 'Well that was certainly interesting...',
@@ -512,11 +512,75 @@ const textNodes = [
         text: "You have decided to take on the dreaded monster lurking inside of the castle. You set out in search of glory and riches.",
         options: [
           {
-            text: 'Finally! Now what can I do with these silver coins?',
+            text: 'The Kings bounty shall be mine!',
             nextText: 29
           }
         ]
       },
+      {
+        id: 29,
+        background: "url('assets/images/medieval-castle')",
+        text: "You arrive at the castle and enter it's courtyard the monster appears from the entrance to the throne room. The monster stands 10ft tall and looks down at you with a hungry look in his eye.",
+        options: [
+          {
+            text: 'By the tip of my sword I shall defeat you!',
+            requiredState: (currentState) => currentState.swordGuild,
+            nextText: 30
+          },
+          {
+            text: 'My shield is my strength you will be defeated!',
+            requiredState: (currentState) => currentState.shieldGuild,
+            nextText: 31
+          },
+          {
+            text: 'No monster can escape the the speed of my arrows!',
+            requiredState: (currentState) => currentState.bowGuild,
+            nextText: 32
+          },
+          
+        
+        ]
+      },
+      {
+        id: 30,
+        background: "url('assets/images/medieval-castle.jpg')",
+        text: "You charge at the monster with your sword in hand he swings at you with his claws but you dodge his attack. You make contact with his flesh dealing a hefty blow.",
+        options: [
+          {
+            text: 'The beast is surely done for press the attack!',
+            nextText: 33
+          },
+          {
+            text: 'Hold my ground and await the beasts counterattack',
+            nextText: 34
+          },
+        ]
+      },
+      {
+        id: 33,
+        background: "url('assets/images/medieval-castle.jpg')",
+        text: "You charge at the monster once more dealing a 2nd blow, but as you stand back you realise his claws have teared through your flesh. You fall the ground in a pool of blood as the monster approaches to finish you off. This is the end.",
+        options: [
+          {
+            text: 'Restart',
+            nextText: -1
+          },
+          
+        ]
+      },
+      {
+        id: 34,
+        background: "url('assets/images/medieval-castle.jpg')",
+        text: "The monster charges at you as he approaches you strike him with your sword dealing a mortal blow but not before you are also hit by his claws. You fall the ground, you have slain the monster and saved the kingdom but you where unable to save yourself. Another adventurer later finds you and the monster laying beside each other he takes the claim for slaying the beast and your noble efforts have been in vain.",
+        options: [
+          {
+            text: 'Congratulations, You Win....or did you? Play Again?',
+            nextText: -1
+          },
+          
+        ]
+      },
+
       
 
       
