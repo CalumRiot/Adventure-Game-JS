@@ -506,6 +506,17 @@ const textNodes = [
           }
         ]
       },
+      {
+        id: 27,
+        background: "url('assets/images/dirt-path.jpg')",
+        text: "You have decided to take on the dreaded monster lurking inside of the castle. You set out in search of glory and riches.",
+        options: [
+          {
+            text: 'Finally! Now what can I do with these silver coins?',
+            nextText: 29
+          }
+        ]
+      },
       
 
       
