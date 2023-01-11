@@ -49,12 +49,12 @@ const textNodes = [
         text: 'You wake up in a strange cabin, you look around and see nobody else is around how did you get here you cannot remember. On a table in the corner of the cabin there is a strange goo substance inside of a jar what will you do with it?',
         options: [
             {
-                text: 'Take the goo',
+                text: 'Take the jar of goo',
                 setState: { blueGoo: true},
                 nextText: 2
             },
             {
-                text: 'Leave the goo',
+                text: 'Leave the jar of goo',
                 setState: { oldManArrested: true },
                 nextText: 2
             }
@@ -85,6 +85,7 @@ const textNodes = [
             },
             {
               text: 'Ignore the merchant',
+              setState: { noMoney: true },
               nextText: 3
             }
         ]
@@ -269,6 +270,11 @@ const textNodes = [
             requiredState: (currentState) => currentState.oldManArrested,
             nextText: 18
           },
+          {
+            text: 'Beg for Money',
+            requiredState: (currentState) => currentState.noMoney,
+            nextText: 28
+          },
         ]
       },
       {
@@ -313,6 +319,7 @@ const textNodes = [
           {
             text: 'Signup to the Sword Guild',
             requiredState: (currentState) => currentState.sword,
+            setState: { swordGuild: true },
             nextText: 22
           },
           {
@@ -330,6 +337,7 @@ const textNodes = [
           {
             text: 'Signup to the Shield Guild',
             requiredState: (currentState) => currentState.shield,
+            setState: { shieldGuild: true },
             nextText: 23
           },
           {
@@ -347,6 +355,7 @@ const textNodes = [
           {
             text: 'Signup to the Archers Guild',
             requiredState: (currentState) => currentState.bow,
+            setState: { bowGuild: true },
             nextText: 24
           },
           {
@@ -367,7 +376,7 @@ const textNodes = [
           },
           {
             text: "What a silly old man",
-            nextText: 15
+            nextText: 14
           },
           
         ]
@@ -375,7 +384,7 @@ const textNodes = [
       {
         id: 25,
         background: "url('assets/images/medieval-town.jpg')",
-        text: "Before I can get an answer the town guards come and take the poor old man away",
+        text: "Before I can get an answer the town guards come and take the poor old man away but as he's being dragged away he rambles about some goo. Could he be talking about the goo from the cabin?",
         options: [
           {
             text: 'Well that was certainly interesting...',
@@ -405,19 +414,19 @@ const textNodes = [
           {
             text: 'Buy a Sword',
             requiredState: (currentState) => currentState.silver || currentState.gold,
-            setState: { sword: true},
+            setState: { sword: true, silver: false},
             nextText: 14
           },
           {
             text: 'Buy a Shield',
             requiredState: (currentState) => currentState.gold,
-            setState: { shield: true},
+            setState: { shield: true, gold: false},
             nextText: 14
           },
           {
             text: 'Buy a Bow',
             requiredState: (currentState) => currentState.silver || currentState.gold,
-            setState: { bow: true},
+            setState: { bow: true, silver: false},
             nextText: 14
           },
           {
@@ -472,6 +481,29 @@ const textNodes = [
             nextText: 26
           },
           
+        ]
+      },
+      {
+        id: 26,
+        background: "url('assets/images/medieval-town.jpg')",
+        text: "After joining your chosen guild you decide not to take the dreaded monster quest. You spend the remainder of your days as a guild member taking part in easier quests to earn a living for yourself.",
+        options: [
+          {
+            text: 'Congratulations, You Win or Did You? Play Again?',
+            nextText: -1
+          }
+        ]
+      },
+      {
+        id: 28,
+        background: "url('assets/images/medieval-town.jpg')",
+        text: "After realising you have no money you decide to sit with the old drunk man by the fountain and beg for some silver. You sit there for many hours before a young adventurer takes pity on you and throws you a few silver coins.",
+        options: [
+          {
+            text: 'Finally! Now what can I do with these silver coins?',
+            setState: { noMoney: false, silver: true},
+            nextText: 14
+          }
         ]
       },
       
