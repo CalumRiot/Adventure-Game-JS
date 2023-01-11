@@ -91,7 +91,7 @@ const textNodes = [
     },
     {
         id: 3,
-        background: "url('assets/images/crossroads3.jpg')",
+        background: "url('assets/images/dirt-path.jpg')",
         text: 'After leaving the merchant you continue walking it takes many hours before you stumble upon a crossroads. You feel yourself becoming tired from all of the walking and you know you need to find someplace to rest. To the left you see a town off in the distance, to the right there is a large Castle at the top of a steep hill and located just by the crossroads is an old rundown stables. Where will you go?',
         options: [
             {
@@ -110,6 +110,7 @@ const textNodes = [
     },
     {
         id: 4,
+        background: "url('assets/images/medieval-castle.jpg')",
         text: 'You finally reach the top of the hill. Once inside the Castle you quickly find a place to sleep. However unbeknownst to you the Castle contains a terrible monster you are killed in your sleep and your journey has ended.',
         options: [
             {
@@ -120,6 +121,7 @@ const textNodes = [
     },
     {
         id: 5,
+        background: "url('assets/images/medieval-town.jpg')",
         text: 'You reach the town and find a inn, however it costs gold to stay the night what will you do?',
         options: [
           {
@@ -136,6 +138,7 @@ const textNodes = [
       },
       {
         id: 6,
+        background: "url('assets/images/dirt-path.jpg')",
         text: 'The hay inside the stables provided an oddly comfortable place for you to sleep. You look to the Castle at the top of the hill and decide it might be worth exploring, but there is also that nearby town. Where should you go?',
         options: [
           {
@@ -150,6 +153,7 @@ const textNodes = [
       },
       {
         id: 7,
+        background: "url('assets/images/medieval-castle.jpg')",
         text: 'You reach the top of the hill and enter the courtyard of the Castle. You think to yourself that the Castle must have some hidden treasures left inside so you decide to explore further. While exploring the castle you come across a horrible monster in your path.',
         options: [
           {
@@ -175,6 +179,7 @@ const textNodes = [
       },
       {
         id: 8,
+        background: "url('assets/images/medieval-castle.jpg')",
         text: 'You attempt to run away from the Monster but he is much faster than you anticipated. You try to escape down a narrow corridor but it is a dead end. The monster catches you. You scream in pain and watch on with horror as he devours your arms and legs like there chicken wings. Your journey has ended.',
         options: [
           {
@@ -185,6 +190,7 @@ const textNodes = [
       },
       {
         id: 9,
+        background: "url('assets/images/medieval-castle.jpg')",
         text: 'You unsheathe your sword and charge at the monster. As you attempt your first swing he grabs you and throws you against the walls breaking your bones, leaving you helpless and paralysed. You watch on in horror as he menacingly walks towards you and quickly devours you. Your journey has ended.',
         options: [
           {
@@ -195,6 +201,7 @@ const textNodes = [
       },
       {
         id: 10,
+        background: "url('assets/images/medieval-castle.jpg')",
         text: 'As the monster charges you take protecting behind your shield however it is no use the monster flings you and the shield across the room like a play toy. Upon hitting the wall you realise that your legs are broken and you are unable to move. You watch on in horror as he menacingly walks towards you and quickly devours you. Your journey has ended.',
         options: [
           {
@@ -205,6 +212,7 @@ const textNodes = [
       },
       {
         id: 11,
+        background: "url('assets/images/medieval-castle.jpg')",
         text: 'You threw your jar of goo at the monster to your astonishment the goo begins to dissolve the monster like an acid. After the dust settled you see that the monster has been destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
         options: [
           {
@@ -215,6 +223,7 @@ const textNodes = [
       },
       {
         id: 12,
+        background: "url('assets/images/medieval-town.jpg')",
         text: 'You sneak inside the inn but the innkeeper finds you during the night and alerts the town guard. You are brought to court and hanged for theft. Your journey has ended.',
         options: [
           {
@@ -225,6 +234,7 @@ const textNodes = [
       },
       {
         id: 13,
+        background: "url('assets/images/medieval-town.jpg')",
         text: 'You awake the next morning feeling fully refreshed, you spent all your gold on the room for the night but you still have some silver left over. You leave the inn and think to yourself you should explore the town but you also remember the castle that you saw the day before. What will you do?',
         options: [
           {
@@ -239,6 +249,7 @@ const textNodes = [
       },
       {
         id: 14,
+        background: "url('assets/images/medieval-town.jpg')",
         text: "You arrive at a fountain located in the center of the town. The town for the most part is very well kept besides the old drunk rambling to himself by the fountain. The town is filled with various stalls, guilds and craftmasters. There is so much to choose from that you don't know where to start. ",
         options: [
           {
@@ -262,6 +273,7 @@ const textNodes = [
       },
       {
         id: 15,
+        background: "url('assets/images/medieval-town.jpg')",
         text: "You look around the stalls and browse the various goods but find nothing of interest.",
         options: [
           {
@@ -272,6 +284,7 @@ const textNodes = [
       },
       {
         id: 16,
+        background: "url('assets/images/guild-hall.jpg')",
         text: "You venture into the hall of guilds you find many guilds but dominant three appear to be the sword guild, the shield guild and the archers guild. Which guild will you join?",
         options: [
           {
@@ -294,6 +307,7 @@ const textNodes = [
       },
       {
         id: 19,
+        background: "url('assets/images/guild-hall.jpg')",
         text: "You enter the sword guild it is booming with people a member of the sword guild walks up to you and asks if you have a sword as it is required for signup and entrance.",
         options: [
           {
@@ -310,6 +324,7 @@ const textNodes = [
       },
       {
         id: 20,
+        background: "url('assets/images/guild-hall.jpg')",
         text: "You enter the shield guild it is booming with people a member of the shield guild walks up to you and asks if you have a shield as it is required for signup and entrance.",
         options: [
           {
@@ -326,6 +341,7 @@ const textNodes = [
       },
       {
         id: 21,
+        background: "url('assets/images/guild-hall.jpg')",
         text: "You enter the archers guild it is booming with people a member of the archer guild walks up to you and asks if you have a bow as it is required for signup and entrance.",
         options: [
           {
@@ -342,6 +358,7 @@ const textNodes = [
       },
       {
         id: 18,
+        background: "url('assets/images/medieval-town.jpg')",
         text: 'You decide to strike up a conversation with the old man but he just barks about some monster "THE MONSTER HE LURKS NO MAN CAN STOP HIM ONLY A DEMON CAN KILL HIM BUT HE DIED LONG AGO NOW ONLY THE MONSTER REMAINS!"',
         options: [
           {
@@ -357,6 +374,7 @@ const textNodes = [
       },
       {
         id: 25,
+        background: "url('assets/images/medieval-town.jpg')",
         text: "Before I can get an answer the town guards come and take the poor old man away",
         options: [
           {
@@ -370,6 +388,7 @@ const textNodes = [
       },
       {
         id: 15,
+        background: "url('assets/images/medieval-town.jpg')",
         text: "You look around the stalls and browse the various goods but find nothing of interest.",
         options: [
           {
@@ -380,6 +399,7 @@ const textNodes = [
       },
       {
         id: 17,
+        background: "url('assets/images/craft-masters.jpg')",
         text: 'You venture over to craftmasters where you find them hard at work building weapons for the various guilds you speak with one of the craftmasters and ask if he could show you his wares. He replies "Swords & Bows 2 Silver each! Shields are Gold coin a piece a lot of metal to make a shield you know." You nod in response.',
         options: [
           {
