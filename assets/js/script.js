@@ -45,7 +45,7 @@ function selectOption(option) {
 const textNodes = [
     {
         id: 1,
-        background: "url('assets/images/cabin1.jpg')",
+        background: "url('assets/images/starting-cabin.jpg')",
         text: 'You wake up in a strange cabin, you look around and see nobody else is around how did you get here you cannot remember. On a table in the corner of the cabin there is a strange goo substance inside of a jar what will you do with it?',
         options: [
             {
@@ -62,7 +62,7 @@ const textNodes = [
     },
     {
         id: 2,
-        background: "url('assets/images/forest2.jpg')",
+        background: "url('assets/images/spooky-forest.jpg')",
         text: 'You venture forth in search of answers. Upon leaving the cabin you follow a small dirt trail through a spooky looking forest you continue walking as fast as your legs will carry you. Once out of the forest you come across a small tent with an oddly looking merchant inside. "Tell me weary traveller have you any goods to trade?"',
         options: [
             {
@@ -426,6 +426,55 @@ const textNodes = [
           },
         ]
       },
+      {
+        id: 22,
+        background: "url('assets/images/quest-board.jpg')",
+        text: 'You have successfully joined the sword guild and have been thought the secrets of sword combat. You decide to browse the guild halls quest board and are told by a member of the archers guild about a nearby castle that is home to a terrible monster. The local king has set a bounty on his head and whoever kills him has been promised all the riches in the world. Will you accept the quest too defeat the monster?',
+        options: [
+          {
+            text: 'Yeah bring it on!',
+            nextText: 27
+          },
+          {
+            text: "No that sounds too scary for me",
+            nextText: 26
+          },
+          
+        ]
+      },
+      {
+        id: 23,
+        background: "url('assets/images/quest-board.jpg')",
+        text: 'You have successfully joined the shield guild and have been thought the secrets of shield combat. You decide to browse the guild halls quest board and are told by a member of the archers guild about a nearby castle that is home to a terrible monster. The local king has set a bounty on his head and whoever kills him has been promised all the riches in the world. Will you accept the quest too defeat the monster?',
+        options: [
+          {
+            text: 'Yeah bring it on!',
+            nextText: 27
+          },
+          {
+            text: "No that sounds too scary for me",
+            nextText: 26
+          },
+          
+        ]
+      },
+      {
+        id: 24,
+        background: "url('assets/images/quest-board.jpg')",
+        text: 'You have successfully joined the archers guild and have been thought the secrets of bow combat. You decide to browse the guild halls quest board and are told by a member of the archers guild about a nearby castle that is home to a terrible monster. The local king has set a bounty on his head and whoever kills him has been promised all the riches in the world. Will you accept the quest too defeat the monster?',
+        options: [
+          {
+            text: 'Yeah bring it on!',
+            nextText: 27
+          },
+          {
+            text: "No that sounds too scary for me",
+            nextText: 26
+          },
+          
+        ]
+      },
+      
 
       
 ]
