@@ -67,19 +67,19 @@ const textNodes = [
         options: [
             {
                 text: 'Trade the jar for a sword',
-                requiredState: (currentState) => currentState.blueGoo,
+                requiredState: (currentState) => currentState.strangeLiquid,
                 setState: { strangeLiquid: false, sword: true },
                 nextText: 3
             },
             {
                 text: 'Trade the jar for a shield',
-                requiredState: (currentState) => currentState.blueGoo,
+                requiredState: (currentState) => currentState.strangeLiquid,
                 setState: { strangeLiquid: false, shield: true },
                 nextText: 3
             },
             {
                 text: 'Sell the jar of liquid',
-                requiredState: (currentState) => currentState.blueGoo,
+                requiredState: (currentState) => currentState.strangeLiquid,
                 setState: { strangeLiquid: false, gold: true },
                 nextText: 3
             },
@@ -519,7 +519,7 @@ const textNodes = [
       },
       {
         id: 29,
-        background: "url('assets/images/medieval-castle')",
+        background: "url('assets/images/medieval-castle.jpg')",
         text: "You arrive at the castle and enter it's courtyard the monster appears from the entrance to the throne room. The monster stands 10ft tall and looks down at you with a hungry look in his eye.",
         options: [
           {
@@ -559,7 +559,7 @@ const textNodes = [
       {
         id: 33,
         background: "url('assets/images/medieval-castle.jpg')",
-        text: "You charge at the monster once more dealing a 2nd blow, but as you stand back you realise his claws have teared through your flesh. You fall the ground in a pool of blood as the monster approaches to finish you off. This is the end.",
+        text: "You charge at the monster once more dealing a 2nd blow, but as you stand back you realise his claws have teared through your flesh. You fall to the ground in a pool of blood as the monster approaches to finish you off. This is the end.",
         options: [
           {
             text: 'Restart',
@@ -571,10 +571,90 @@ const textNodes = [
       {
         id: 34,
         background: "url('assets/images/medieval-castle.jpg')",
-        text: "The monster charges at you as he approaches you strike him with your sword dealing a mortal blow but not before you are also hit by his claws. You fall the ground, you have slain the monster and saved the kingdom but you where unable to save yourself. Another adventurer later finds you and the monster laying beside each other he takes the claim for slaying the beast and your noble efforts have been in vain.",
+        text: "The monster charges at you as he approaches you strike him with your sword dealing a mortal blow but not before you are also hit by his claws. You fall the ground, you have slain the monster and saved the kingdom but you where unable to save yourself.",
         options: [
           {
             text: 'Congratulations, You Win....or did you? Play Again?',
+            nextText: -1
+          },
+          
+        ]
+      },
+      {
+        id: 31,
+        background: "url('assets/images/medieval-castle.jpg')",
+        text: "You grip your shield and brace yourself for the monsters attack. The monster charges at you and attempts to deal a fatal wound but you hold your ground.",
+        options: [
+          {
+            text: 'Time to attack and finish this monster once and for all.',
+            nextText: 35
+          },
+          {
+            text: 'I will continue to hold my ground for my shield shall protect me.',
+            nextText: 36
+          },
+          
+        ]
+      },
+      {
+        id: 36,
+        background: "url('assets/images/medieval-castle.jpg')",
+        text: "You hold your ground the Monster attacks again and again and again and again and again. The Monster stands utterly exhausted his attacks have done nothing to you. The Monster falls to the floor from his exhaustion allowing you to deal a final blow. You have defeated the monster and saved the kingdom.",
+        options: [
+          {
+            text: 'Congratulations, You Win! Play Again?',
+            nextText: -1
+          },
+          
+        ]
+      },
+      {
+        id: 35,
+        background: "url('assets/images/medieval-castle.jpg')",
+        text: "You charge at the monster attempting to use your shield as a weapon. But as you swing your shield back to hit the monster you expose yourself to his attacks and the monster slashes you with his claws. You fall to the ground in a pool of blood as the monster approaches to finish you off. This is the end.",
+        options: [
+          {
+            text: 'Restart',
+            nextText: -1
+          },
+          
+        ]
+      },
+      {
+        id: 32,
+        background: "url('assets/images/medieval-castle.jpg')",
+        text: "You prepare an arrow from your quiver and begin firing at the monster. The monster attacks but you keep a safe distance choosing to shoot from afar. The monster is bleeding and heavily wounded but he is unrelenting and continues to attack you. You reach for another arrow but your quiver is empty. What will you do?",
+        options: [
+          {
+            text: 'Attempt to pull out an arrow from the monster',
+            nextText: 37
+          },
+          {
+            text: 'Search around for any fallen or used arrows',
+            nextText: 38
+          },
+          
+        ]
+      },
+      {
+        id: 37,
+        background: "url('assets/images/medieval-castle.jpg')",
+        text: "You charge at the monster avoiding his claws allowing you to pull an arrow from his leg. But he catches you with his claws as you attempt to further the distance. He slashes through your flesh you are bleeding heavily but as he holds you up you stick your last arrow in his skull. The monster falls to the ground defeated. You attempt to stand but you are mortally wounded, you have slain the monster and saved the kingdom but you where unable to save yourself.",
+        options: [
+          {
+            text: 'Congratulations, You Win....or did you? Play Again?',
+            nextText: -1
+          },
+          
+        ]
+      },
+      {
+        id: 38,
+        background: "url('assets/images/medieval-castle.jpg')",
+        text: "You search around attempting to find an spare arrow but its no use all your arrows lay broken or stuck in the monster. You can only look on helplessly as you are eventually cornered by the monster. He slashes through your flesh, you fall to the ground in a pool of blood as the monster approaches to finish you off. This is the end.",
+        options: [
+          {
+            text: 'Restart',
             nextText: -1
           },
           
