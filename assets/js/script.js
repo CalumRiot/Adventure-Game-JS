@@ -36,7 +36,7 @@ function showOption(option) {
 function selectOption(option) {
     const nextTextNodeId = option.nextText
     if (nextTextNodeId <= 0) {
-        return startGame()
+         startGame()
     }
     state = Object.assign(state, option.setState)
     showTextNode(nextTextNodeId)
@@ -666,4 +666,4 @@ const textNodes = [
       
 ]
 
-startGame()
+window.onload = startGame()
