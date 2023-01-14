@@ -11,7 +11,7 @@
     right: 0;
     height: 100px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 body {
@@ -53,4 +53,11 @@ body {
 
 .btn:hover {
     border-color: black;
+}
+
+@media screen and (max-width: 400px) {
+
+    .header {
+        font-size: 1rem;
+    }
 }
