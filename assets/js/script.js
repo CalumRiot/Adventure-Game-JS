@@ -1,15 +1,21 @@
+/* assign the text element for game questions */
 const textElement = document.getElementById('text')
+/* assign the options button element for game answers */
 const optionButtonsElement = document.getElementById('option-buttons')
 
 let state = {}
 
+/* assign body element to allow images to be assign too it */
 let bgImage = document.getElementById('game-bg')
 
+/* assign function to start game in textNode 1 */
 function startGame() {
     state = {}
     showTextNode(1)
 }
 
+/* function that changes textNode questions and answers each time the user clicks on an option button, bgimage is also added to
+change the background image to suit game stories setting */
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text;
@@ -29,10 +35,14 @@ function showTextNode(textNodeIndex) {
     })
 }
 
+/* function that allows for states to be added into game such as sword, shield, bow etc allowing the user to unlock different options
+depending on there previous answers */
 function showOption(option) {
     return option.requiredState == null || option.requiredState(state)
 }
 
+/* sends user back to beginning when they win or lose game by adding if statement of <= 0 if nextState is = -1
+the user will be sent back to start of the game  */
 function selectOption(option) {
     const nextTextNodeId = option.nextText
     if (nextTextNodeId <= 0) {
@@ -42,6 +52,8 @@ function selectOption(option) {
     showTextNode(nextTextNodeId)
 }
 
+/* text nodes to input id, background, text, options, setStates & nextText. Game story is built here with nextText sending the user to
+the next id based on there answers with some id's being unavailable to the user based on what choices they choose prior */
 const textNodes = [
     {
         id: 1,
